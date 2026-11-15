@@ -1,0 +1,138 @@
+# =============================================================================
+# SplitBill — .gitignore
+# Rule of thumb: nothing that is generated, machine-specific or secret is committed.
+# =============================================================================
+
+# ---------------------------------------------------------------- Secrets ----
+# Never commit credentials, keys or real configuration. Keep only *.example files.
+.env
+.env.*
+!.env.example
+appsettings.Development.json
+appsettings.Production.json
+appsettings.Staging.json
+appsettings.Local.json
+appsettings.*.local.json
+secrets/
+secrets.json
+*.pfx
+*.p12
+*.key
+*.pem
+*.crt
+*.cer
+*.jks
+*.keystore
+*.snk
+.aspnet/
+# User-secrets (dotnet user-secrets) live outside the repo; this guards accidental copies
+UserSecrets/
+
+# ------------------------------------------------------------ .NET build -----
+bin/
+obj/
+out/
+publish/
+artifacts/
+*.dll
+*.exe
+*.pdb
+*.cache
+*.nupkg
+*.snupkg
+*.binlog
+# Lock files ARE committed (RestorePackagesWithLockFile); do not ignore packages.lock.json
+project.lock.json
+project.fragment.lock.json
+*.nuget.props
+*.nuget.targets
+.nuget/
+msbuild.log
+msbuild.err
+msbuild.wrn
+
+# ---------------------------------------------------------------- Testing ----
+TestResults/
+test-results/
+coverage/
+coveragereport/
+*.trx
+*.coverage
+*.coveragexml
+*.opencover.xml
+*.cobertura.xml
+lcov.info
+BenchmarkDotNet.Artifacts/
+
+# ------------------------------------------------------------------- IDEs ----
+# Visual Studio
+.vs/
+*.user
+*.userosscache
+*.suo
+*.sln.docstates
+*.vcxproj.filters
+*.DotSettings.user
+# Rider / JetBrains
+.idea/
+*.sln.iml
+# VS Code (keep shared settings if the team adds them explicitly)
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+# Cursor
+.cursor/
+# Editor swap files
+*.swp
+*.swo
+*~
+
+# ---------------------------------------------------------------- Docker -----
+docker-compose.override.yml
+docker-compose.*.local.yml
+.docker/
+*.tar
+*.tar.gz
+
+# --------------------------------------------------------------- Database ----
+*.dump
+*.sql.gz
+*.backup
+pgdata/
+postgres-data/
+
+# -------------------------------------------------------- Operating system ---
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# ------------------------------------------------------------- Tooling -------
+# Python helpers used only for local checks
+.venv/
+venv/
+__pycache__/
+*.pyc
+# Node (if a frontend is ever added next to this backend)
+node_modules/
+npm-debug.log*
+yarn-error.log*
+# Logs
+logs/
+*.log
+# Local scratch
+tmp/
+temp/
+*.tmp
+*.orig
+*.rej
+# R / RStudio session leftovers
+.Rhistory
+.RData
+.Rproj.user/

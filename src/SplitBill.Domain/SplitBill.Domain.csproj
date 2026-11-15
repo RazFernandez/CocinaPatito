@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!--
+    Domain layer: entities, value objects, policies and domain events.
+    Rule: zero NuGet packages and zero references to other projects.
+  -->
+  <PropertyGroup>
+    <RootNamespace>SplitBill.Domain</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <InternalsVisibleTo Include="SplitBill.Domain.Tests" />
+  </ItemGroup>
+
+</Project>
