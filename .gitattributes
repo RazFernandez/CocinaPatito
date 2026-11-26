@@ -1,0 +1,15 @@
+# Normalise line endings in the repository; check out with the platform default...
+* text=auto
+
+# ...except files executed inside Linux containers, which break with CRLF on Windows
+# (git core.autocrlf=true would otherwise convert them).
+*.sh               text eol=lf
+Vagrantfile        text eol=lf
+Dockerfile*        text eol=lf
+*.env.example      text eol=lf
+*.sql              text eol=lf
+
+# Binary assets
+*.png              binary
+*.jpg              binary
+*.pdf              binary

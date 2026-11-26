@@ -19,6 +19,8 @@ cobra a cada participante con un QR CoDi generado a través de la API de Pey.
 SQL/                         Scripts DDL versionados (0001_initial_schema.sql, 0002_app_role.sql)
 src/SplitBill.Domain/        Dominio puro: Money, SplitCalculator, Bill, CodiQr, eventos
 tests/SplitBill.Domain.Tests Pruebas xunit.v3 + Shouldly (TDD)
+tools/codi-qr/               Extra: script Python que dibuja el QR a partir de una respuesta de Pey
+Vagrantfile, provision/      Entorno de desarrollo: Vagrant con Docker, .NET 10 y PostgreSQL 18
 Directory.Build.props        Reglas de compilación compartidas (nullable, warnings as errors, XML docs)
 Directory.Packages.props     Versiones de paquetes centralizadas y fijas
 ```
@@ -28,8 +30,10 @@ Capas pendientes (siguiente bloque): `SplitBill.Application`, `SplitBill.Infrast
 
 ## Requisitos
 
-- .NET SDK 10.0.x
-- Docker (para PostgreSQL 18 local y pruebas de integración)
+- Docker Desktop y Vagrant 2.4+: el entorno completo se levanta con `vagrant up --provider=docker`.
+  Usuario y contraseñas de la base se configuran en `provision/db.env`.
+  Ver [provision/README.md](../provision/README.md).
+- Opcional en Windows: .NET SDK 10.0.x para compilar fuera del contenedor.
 
 ## Pruebas
 

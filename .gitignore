@@ -136,3 +136,10 @@ temp/
 .Rhistory
 .RData
 .Rproj.user/
+
+# ---------------------------------------------------------------- Vagrant ----
+# Vagrant machine state and the real database credentials (copy from db.env.example).
+.vagrant/
+provision/db.env
+*.env
+!*.env.example
