@@ -5,6 +5,7 @@
 
 ![Cómo funciona SplitBill con Pey](docs/pitch-diagram.png)
 
+
 ---
 
 ## El problema
