@@ -1,8 +1,0 @@
-<Solution>
-  <Folder Name="/src/">
-    <Project Path="src/SplitBill.Domain/SplitBill.Domain.csproj" />
-  </Folder>
-  <Folder Name="/tests/">
-    <Project Path="tests/SplitBill.Domain.Tests/SplitBill.Domain.Tests.csproj" />
-  </Folder>
-</Solution>

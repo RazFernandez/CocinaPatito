@@ -1,6 +1,0 @@
-# Generated images are live, payable production QRs: never commit them.
-output/
-*.png
-# Real Pey responses stay local too.
-*.response.json
-response.json
